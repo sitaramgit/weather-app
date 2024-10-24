@@ -16,8 +16,7 @@ const SearchWeather = ({ updateCity, isLoading }:ISearchWeather) => {
                     </Typography>
                 </Grid>
                 <Grid size={{ xs: 12, sm: 12, md: 7, lg: 7 }} >
-                    <Box
-                    >
+                    <Box sx={{display: 'flex'}}>
                         <TextField
                             label="Enter City"
                             variant="outlined"
@@ -25,7 +24,7 @@ const SearchWeather = ({ updateCity, isLoading }:ISearchWeather) => {
                             size="small"
                             onChange={(e) => setCity(e.target.value)}
                         />
-                        <Button sx={{ml:'5px', height: '40px'}} onClick={() => updateCity(city)} variant="outlined" startIcon={<HelpOutlineIcon />}>
+                        <Button sx={{ml:'5px', mr: '5px', height: '40px'}} onClick={() => updateCity(city)} variant="outlined" startIcon={<HelpOutlineIcon />}>
                             search
                         </Button>
                         {isLoading && <CircularProgress />}
